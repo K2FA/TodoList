@@ -33,8 +33,8 @@ use Inertia\Inertia;
 Route::permanentRedirect('/','/login');
 
 Route::get('/dashboard', [TodoController::class,'index'])->middleware(['auth', 'verified'])->name('dashboard');
-Route::post('/todo/add',[TodoController::class,'store'])->middleware(['auth', 'verified'])->name('store.todo');
-Route::get('/todo/create', [TodoController::class,'create'])->middleware(['auth', 'verified'])->name('create.todo');
+Route::get('/todo',[TodoController::class,'create'])->middleware(['auth', 'verified'])->name('create.todo');
+Route::post('/todo',[TodoController::class,'store'])->middleware(['auth', 'verified'])->name('store.todo');
 Route::post('/todo/update',[TodoController::class,'update'])->middleware(['auth', 'verified'])->name('update.todo');
 Route::get('/todo/edit', [TodoController::class,'edit'])->middleware(['auth', 'verified'])->name('edit.todo');
 Route::post('/todo/delete',[TodoController::class,'destroy'])->middleware(['auth', 'verified'])->name('delete.todo');

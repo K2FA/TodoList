@@ -23,8 +23,8 @@ class TodoController extends Controller
             'todo' => $request['todo'],
         ]);
 
-        // return to_route('dashboard');
-        return redirect()->back();
+        return to_route('dashboard');
+        // return redirect()->back();
     }
 
     public function edit(Request $request){

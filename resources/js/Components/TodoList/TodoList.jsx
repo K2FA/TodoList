@@ -32,6 +32,7 @@ const todo = (todos) => {
 };
 
 const TodoList = ({ todos }) => {
+    console.log(todos);
     return todo(todos);
 };
 
